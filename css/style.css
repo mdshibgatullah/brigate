@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: arial black;
+}
+
+:root{
+    --color1: #ff5200;
+    --color2: #ddd;
+}
+
+a, a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+p, ul{
+    margin: 0;
+    padding: 0; 
+}
+
+
+/*<!--------header---------->*/
+
+.headerpart{
+    background: var(--color2);
+}
+
+.headIcon a{
+    transition: .3s;
+}
+
+.headIcon a:hover{
+    color: var(--color1);
+}
+
+.headCon i{
+    padding-left: 0 !important;
+    color: var(--color1);
+}
+
+/*<!--------header end------->*/
+
+
+/*<!--------nav-bar---------->*/
+
+.navLink a{
+    transition: .3s;
+}
+
+.navLink a:hover{
+    color: var(--color1);
+}
+/*<!--------nav-bar end------->*/
+
+
+/*<!--------home---------->*/
+
+.home{
+    background: url(../Brigate/slide-2.jpg) no-repeat center;
+    background-size: cover;
+    padding: 140px 0;
+}
+
+.homeCon h4{
+    font-size: 18px;
+}
+
+.homeCon{
+    color: black;
+}
+
+.btn{
+    background: var(--color1);
+    border: none;
+    transition: .4s;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+
+.btn:hover{
+    background: var(--color2);
+    color: black;
+}
+/*<!--------home end------->*/
+
+
+/*<!--------service---------->*/
+
+.service{
+    background: var(--color2);
+    padding: 80px 0;
+}
+
+.serviceCon{
+    background: white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+    transition: .4s;
+}
+
+.serviceCon i{
+    font-size: 40px;
+    color: var(--color1) !important;
+}
+
+.serviceCon i,a{
+    transition: .4s;
+}
+
+.serviceCon a{
+    color: var(--color1);
+}
+
+.serviceCon:hover{
+   background: var(--color1);
+   color: white;
+   
+}
+
+
+.serviceCon:hover.serviceCon a{
+   color: white !important;
+}
+.serviceCon:hover.serviceCon i{
+   color: white !important;
+}
+
+
+/*<!--------service end------->*/
+
+
+
+/*<!--------team---------->*/
+
+.team{
+    padding: 80px 0;
+}
+
+.teamLink li{
+    padding-bottom: 20px;
+}
+
+.teamLink li a:hover{
+    color: var(--color1) !important;
+}
+
+
+
+/*<!--------team end------->*/
+
+
+
+/*<!--------customer---------->*/
+
+.customer{
+    background: url(../Brigate/customerNum.jpg) no-repeat center;
+    padding: 30px 0;
+}
+/*<!--------customer end------->*/
+
+
+/*<!--------from---------->*/
+
+.from{
+    padding: 80px 0;
+}
+.fromdivider{
+    height: 2px;
+    width: 90px;
+    background: var(--color1);
+    border-radius: 50%;
+}
+
+.fromHead p{
+    margin: auto;
+    width: 500px;
+}
+
+.fromCon h4{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.fromImg img{
+    transition: .4s linear;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+}
+
+.fromImg img:hover{
+    transform: scale(1.05);
+}
+
+
+/*<!--------from end------->*/
+
+
+/*<!--------pricing plan---------->*/
+
+.price{
+    background: var(--color2);
+    padding: 80px 0;
+}
+
+.priceCon{
+    background: white;
+
+}
+
+.priceCon h4{
+    font-size: 18px;
+}
+
+.priceCon span{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.priceList li{
+    padding-bottom: 12px;
+}
+
+/*<!--------pricing plan end------->*/
+
+
+/*<!--------idea---------->*/
+
+.ideaConM{
+    background: black;
+    height: 100%;
+}
+
+.ideaCon h1{
+    font-size: 30px;
+}
+
+.ideaSubCon h3{
+    font-size: 20px;
+}
+/*<!--------idea end------->*/
+
+
+
+/*<!--------team2---------->*/
+
+.team2{
+    padding: 80px 0;
+}
+
+/*
+.team2Con img{
+    transition: .3s linear;
+}
+
+.team2Con img:hover{
+    transform: scale(1.05);
+} */
+
+.teamIcon a{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.teamIcon{
+    margin-top: -40px;
+    visibility: hidden;
+    transition: .3s;
+    opacity: 0;
+}
+
+.team2Con:hover .teamIcon{
+    visibility: visible;
+    opacity: 1;
+}
+
+.team2Con:hover .teamIcon a{
+    background: var(--color2);
+    border: 2px solid var(--color1);
+}
+
+
+/*<!--------team2 end------->*/
+/*<!--------header---------->*/
+/*<!--------header end------->*/
