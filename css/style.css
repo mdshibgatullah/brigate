@@ -43,9 +43,36 @@ p, ul{
 }
 
 .headCon i{
-    padding-left: 0 !important;
     color: var(--color1);
+    padding-right: 6px;
 }
+
+/* ---- Responsive ---- */
+@media (max-width: 767px) {
+
+    .headCon {
+        flex-direction: column;         
+        gap: 5px;
+    }
+
+    .headCon p {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .headIcon {
+        justify-content: center !important;
+        margin-top: 10px;
+    }
+
+    .headIcon ul {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+
 
 /*<!--------header end------->*/
 
@@ -68,6 +95,15 @@ p, ul{
     background: url(../Brigate/slide-2.jpg) no-repeat center;
     background-size: cover;
     padding: 140px 0;
+    position: relative;   
+}
+
+.home::after{
+    content: '';
+    inset: 0;
+    background: rgba(0, 0, 0, .2);
+    position: absolute;
+    z-index: 1;
 }
 
 .homeCon h4{
@@ -75,8 +111,12 @@ p, ul{
 }
 
 .homeCon{
-    color: black;
+    color: white;
+    z-index: 2; 
+    position: relative;
 }
+
+
 
 .btn{
     background: var(--color1);
@@ -101,10 +141,17 @@ p, ul{
     padding: 80px 0;
 }
 
+.serviceM{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
 .serviceCon{
     background: white;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
     transition: .4s;
+    border-radius: 3px;
 }
 
 .serviceCon i{
@@ -146,11 +193,32 @@ p, ul{
 }
 
 .teamLink li{
-    padding-bottom: 20px;
+    padding-bottom: 12px;
+    list-style: none;
+}
+
+.teamLink li a{
+    text-decoration: none;
+    color: #333;
 }
 
 .teamLink li a:hover{
     color: var(--color1) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .teamCon {
+        text-align: center;
+    }
+
+    .teamLink {
+        justify-content: center;
+    }
+
+    .teamLink ul {
+        text-align: left;
+    }
 }
 
 
@@ -164,40 +232,106 @@ p, ul{
 .customer{
     background: url(../Brigate/customerNum.jpg) no-repeat center;
     padding: 30px 0;
+    position: relative;
 }
+
+
+.customer::after{
+    content: '';
+    inset: 0;
+    background: rgba(0, 0, 0, .2);
+    position: absolute;
+    z-index: 1;
+}
+
+.customM{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+.customM {
+    position: relative;
+    z-index: 2;
+}
+
+
+
 /*<!--------customer end------->*/
 
 
 /*<!--------from---------->*/
 
-.from{
+.from {
     padding: 80px 0;
+    background: #f9f9f9;
 }
-.fromdivider{
-    height: 2px;
+
+.fromdivider {
+    height: 3px;
     width: 90px;
     background: var(--color1);
-    border-radius: 50%;
+    border-radius: 50px;
 }
 
-.fromHead p{
+.fromHead p {
     margin: auto;
     width: 500px;
+    max-width: 100%;
+    color: #555;
 }
 
-.fromCon h4{
+.fromCon {
+    background: #fff;
+    border-radius: 10px;
+    transition: .4s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.fromCon:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+}
+
+.fromImg {
+    overflow: hidden;
+}
+
+.fromImg img {
+    transition: .4s ease;
+    width: 100%;
+}
+
+.fromCon:hover img {
+    transform: scale(1.08);
+}
+
+.fromCon h4 {
     font-size: 18px;
     padding-top: 15px;
+    font-weight: bold;
+    color: #222;
 }
 
-.fromImg img{
-    transition: .4s linear;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+.fromCon p {
+    color: #666;
+    padding: 20px;
 }
 
-.fromImg img:hover{
-    transform: scale(1.05);
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .col-3 {
+        width: 50%;
+        margin-bottom: 20px;
+    }
 }
+
+@media (max-width: 576px) {
+    .col-3 {
+        width: 100%;
+    }
+}
+
 
 
 /*<!--------from end------->*/
@@ -205,27 +339,78 @@ p, ul{
 
 /*<!--------pricing plan---------->*/
 
-.price{
+.price {
     background: var(--color2);
     padding: 80px 0;
 }
 
-.priceCon{
-    background: white;
 
+.priceCon {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: .4s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    position: relative;
+    overflow: hidden;
 }
 
-.priceCon h4{
-    font-size: 18px;
+
+.priceCon:hover {
+    box-shadow: 0 10px 35px rgba(0,0,0,.2);
 }
 
-.priceCon span{
+
+
+.priceCon h4 {
     font-size: 20px;
-    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--color1);
 }
 
-.priceList li{
+
+.priceCon h2 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #222;
+}
+
+.priceCon span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #777;
+}
+
+
+.priceList {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 20px;
+}
+
+.priceList li {
     padding-bottom: 12px;
+    color: #555;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .col-4 {
+        width: 50%;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-4 {
+        width: 100%;
+    }
 }
 
 /*<!--------pricing plan end------->*/
@@ -233,18 +418,89 @@ p, ul{
 
 /*<!--------idea---------->*/
 
-.ideaConM{
-    background: black;
+.ideaImg {
     height: 100%;
 }
 
-.ideaCon h1{
-    font-size: 30px;
+.ideaImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
-.ideaSubCon h3{
-    font-size: 20px;
+.ideaConM {
+    background: linear-gradient(90deg, #000, #111);
+    height: 100%;
 }
+
+.ideaSubM {
+    margin-top: 30px;
+}
+
+.ideaSubCon {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-left: 3px solid var(--color1);
+    border-radius: 8px;
+    transition: .3s;
+    min-width: 200px;
+}
+
+.ideaSubCon:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-4px);
+}
+
+.ideaCon h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.ideaSubCon h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.ideaSubCon p {
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* Responsive  */
+@media (max-width: 992px) {
+    .ideaConM {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ideaCon h1 {
+        font-size: 28px;
+    }
+    .ideaSubM {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .ideaSubCon {
+        min-width: 100%;
+    }
+    .ideaImg img {
+        height: 300px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .ideaConM {
+        padding: 30px 20px;
+    }
+    .ideaCon h1 {
+        font-size: 24px;
+    }
+    .ideaImg img {
+        height: 250px;
+    }
+}
+
 /*<!--------idea end------->*/
 
 
@@ -254,6 +510,12 @@ p, ul{
 .team2{
     padding: 80px 0;
 }
+
+.team2ConM{
+    box-shadow: 0 10px 35px rgba(0,0,0,.2);
+}
+
+
 
 /*
 .team2Con img{
@@ -293,6 +555,84 @@ p, ul{
 }
 
 
+
+/*<!--------footer---------->*/
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 60px 0 30px 0;
+}
+
+
+.footerBrand p {
+    color: #bbb;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.footerBrand h2 span{
+    font-weight: bold;
+    color: #ff5200;
+}
+
+.footerLinks {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footerLinks li {
+    margin-bottom: 10px;
+}
+
+.footerLinks li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+.footerLinks li a:hover {
+    color: var(--color1);
+}
+
+.footer p {
+    margin: 5px 0;
+    color: #bbb;
+    font-size: 18px;
+}
+
+.footerSocial a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: var(--color1);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    transition: .3s, transform .3s;
+}
+
+.footerSocial a:hover {
+    background: var(--color2);
+    color: black;
+    transform: scale(1.1);
+}
+
+.footerBottom p {
+    color: #777;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footerSocial a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
 /*<!--------team2 end------->*/
-/*<!--------header---------->*/
+
 /*<!--------header end------->*/
